@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Никто — Nobody (2021)</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #070707;
+    color: #eaeaea;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 18px 25px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+}
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #d4af37;
+    text-shadow: 0 0 10px #d4af37;
+}
+
+.banner {
+    width: 100%;
+    height: 520px;
+    background: url('banner20.jpeg') center/cover no-repeat;
+    position: relative;
+    animation: fadeIn 1.8s ease forwards;
+}
+.banner::after {
+    content:"";
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:250px;
+    background: linear-gradient(transparent, #070707);
+}
+
+.content {
+    max-width: 1200px;
+    margin: -150px auto 50px;
+    display: flex;
+    gap: 35px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 2.2s ease forwards;
+}
+
+.poster {
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(212,175,55,0.45);
+    transition: 0.35s;
+}
+.poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px #d4af37;
+}
+
+.details { flex: 1; min-width: 300px; }
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    color: #d4af37;
+    text-shadow: 0 0 15px #d4af37;
+}
+.rating {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 7px 15px;
+    border-radius: 8px;
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    box-shadow: 0 0 10px #d4af37;
+}
+.info-line { margin: 10px 0; opacity: 0.85; }
+.description {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.btn-watch {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #d4af37;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #d4af37;
+}
+.btn-watch:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #ffdf70;
+}
+
+.section-title {
+    margin: 60px 20px 20px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #d4af37;
+    text-shadow: 0 0 12px #d4af37;
+}
+
+iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    border-radius: 16px;
+    border: none;
+    display: block;
+    margin: 0 auto 50px;
+    box-shadow: 0 0 30px rgba(212,175,55,0.35);
+    animation: fadeIn 2.5s ease forwards;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Никто</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="content">
+    <img src="film20.jpg" class="poster">
+
+    <div class="details">
+        <div class="title">Никто (2021)</div>
+        <div class="rating">7.8 ★</div>
+
+        <div class="info-line">Жанр: боевик, триллер</div>
+        <div class="info-line">Режиссёр: Илья Найшуллер</div>
+        <div class="info-line">В ролях: Боб Оденкёрк, Конни Нильсен, Алексей Серебряков</div>
+        <div class="info-line">Продолжительность: 1ч 32м</div>
+
+        <div class="description">
+            Хатч Мэнселл — обычный семьянин, который старается не конфликтовать.
+            Но после нападения на его дом он пробуждает прошлое, о котором никто не подозревал.
+            И теперь преступникам лучше не стоять у него на пути.
+        </div>
+
+        <a href="#watch" class="btn-watch">▶ Смотреть сейчас</a>
+    </div>
+</div>
+
+<div class="section-title">Трейлер</div>
+<iframe src="https://www.youtube.com/embed/wZti8QKBWPo" allowfullscreen></iframe>
+
+<div class="section-title" id="watch">Смотреть фильм</div>
+<iframe src="https://www.youtube.com/embed/example987" allowfullscreen></iframe>
+
+<footer>
+    © Расул — 2025
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Правила просмотра фильмов</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== ОБЩИЕ СТИЛИ ===== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #0b0b0b;
+    color: #f0f0f0;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ff4444;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* ===== БАННЕР ===== */
+.banner {
+    width: 100%;
+    height: 250px;
+    background: url('banner25.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(transparent, #0b0b0b);
+}
+
+/* ===== КОНТЕНТ ===== */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ff4444;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.rules {
+    list-style: none;
+    padding: 0;
+}
+
+.rules li {
+    background: #1a1a1a;
+    margin: 12px 0;
+    padding: 15px 20px;
+    border-left: 5px solid #ff4444;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.2);
+    font-size: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.rules li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255,0,0,0.5);
+}
+
+/* ===== КНОПКА ===== */
+.btn-back {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #ff4444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-back:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #111;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 40px;
+    color: #ff5555;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Правила просмотра фильмов</h1>
+</header>
+
+<div class="banner">
+</div>
+
+<div class="container">
+    <div class="section-title">Общие правила</div>
+    <ul class="rules">
+        <li>📌 Не делитесь ссылкой с посторонними, чтобы сохранить доступ к фильмам.</li>
+        <li>📌 Не используйте запрещённые плагины или расширения для обхода рекламы.</li>
+        <li>📌 Смотрите фильмы только на безопасных устройствах.</li>
+        <li>📌 Соблюдайте возрастные ограничения фильмов.</li>
+        <li>📌 Уважайте других пользователей сайта и не оставляйте спам в комментариях.</li>
+        <li>📌 В случае проблем с видео, перезагрузите страницу или попробуйте другой браузер.</li>
+    </ul>
+
+    <a href="practika2.html" class="btn-back">← Вернуться на главную</a>
+</div>
+
+<footer>
+    © Rasul Imangaziev
+</footer>
+
+</body>
+</html>

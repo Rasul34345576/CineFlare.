@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Апокалипсис — Фильм</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #040404;
+    color: #eaeaea;
+}
+
+/* Анимация появления */
+@keyframes fade {
+    from {opacity:0; transform: translateY(40px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+/* Шапка */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 18px 30px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+}
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #ff1e1e;
+    text-shadow: 0 0 12px #ff1e1e;
+}
+
+/* Баннер */
+.banner {
+    width: 100%;
+    height: 520px;
+    background: url('banner21.jpg') center/cover no-repeat;
+    position: relative;
+    animation: fade 1.5s ease forwards;
+}
+.banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 260px;
+    background: linear-gradient(transparent, #040404);
+}
+
+/* Контент */
+.content {
+    max-width: 1200px;
+    margin: -160px auto 60px;
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    animation: fade 2s ease forwards;
+}
+
+/* Постер */
+.poster {
+    width: 270px;
+    border-radius: 12px;
+    box-shadow: 0 0 40px rgba(255,30,30,0.4);
+    transition: .35s;
+}
+.poster:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 60px #ff1e1e;
+}
+
+/* Текст */
+.details {
+    flex: 1;
+    min-width: 300px;
+}
+.title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ff1e1e;
+    text-shadow: 0 0 18px #ff1e1e;
+}
+.rating {
+    margin: 10px 0 15px;
+    display: inline-block;
+    padding: 7px 16px;
+    background: #ff1e1e;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 10px #ff1e1e;
+}
+.info {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+.description {
+    margin-top: 18px;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 26px;
+    background: #ff1e1e;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .3s;
+    box-shadow: 0 0 20px #ff1e1e;
+}
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px #ff3b3b;
+}
+
+/* Заголовок секции */
+.section-title {
+    margin: 50px 20px 20px;
+    font-size: 29px;
+    font-weight: 800;
+    color: #ff1e1e;
+    text-shadow: 0 0 12px #ff1e1e;
+    text-align: center;
+}
+
+/* Видео */
+iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: block;
+    margin: 0 auto 50px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255,30,30,0.3);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 18px;
+    text-align: center;
+    opacity: 0.8;
+    margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Апокалипсис</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="content">
+    <img src="film21.jpg" class="poster">
+
+    <div class="details">
+        <div class="title">Апокалипсис (2006)</div>
+        <div class="rating">8.4 ★</div>
+
+        <div class="info">Жанр: постапокалипсис, боевик</div>
+        <div class="info">Режиссёр: Мэл Гибсон</div>
+        <div class="info">В ролях: Руди Янгблад, Далия Эрнандес, Джонатан Брюэр</div>
+        <div class="info">Продолжительность: 2ч 19м</div>
+
+        <div class="description">
+            После нападения кровожадного племени сын вождя должен спасти свою семью. Этнографический блокбастер Мела Гибсона
+        </div>
+
+        <a href="#watch" class="btn">▶ Смотреть</a>
+    </div>
+</div>
+
+<div class="section-title">Трейлер</div>
+<iframe src="https://www.youtube.com/embed/example" allowfullscreen></iframe>
+
+<div class="section-title" id="watch">Смотреть фильм</div>
+<iframe src="https://www.youtube.com/embed/example2" allowfullscreen></iframe>
+
+<footer>
+    © Расул — 2025
+</footer>
+
+</body>
+</html>

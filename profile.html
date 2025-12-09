@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Профиль пользователя</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0f0f0f;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+header h1 {
+    font-size: 32px;
+    color: #ff4c4c;
+    text-shadow: 0 0 10px #ff4c4c;
+}
+
+/* ===== PROFILE ===== */
+.profile {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+    animation: fadeIn 1.5s ease forwards;
+}
+.profile-left {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+.profile-left img {
+    width: 220px;
+    border-radius: 50%;
+    border: 4px solid #ff4c4c;
+    box-shadow: 0 0 30px #ff4c4c;
+}
+.profile-left h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #ff4c4c;
+}
+.profile-left p {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* ===== PROFILE RIGHT ===== */
+.profile-right {
+    flex: 2;
+    min-width: 300px;
+}
+.section-title {
+    font-size: 26px;
+    color: #ff4c4c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff4c4c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.skills, .socials, .projects {
+    margin-bottom: 30px;
+}
+
+/* Skills */
+.skills .skill {
+    margin-bottom: 10px;
+}
+.skills .skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.skills .skill-bar {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skills .skill-bar span {
+    display: block;
+    height: 100%;
+    background: #ff4c4c;
+    width: 0;
+    animation: fillSkill 2s forwards;
+}
+
+/* Socials */
+.socials a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #ff4c4c;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.socials a:hover {
+    color: #fff;
+}
+
+/* Projects */
+.projects .project {
+    background: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #ff4c4c;
+    transition: 0.3s;
+}
+.projects .project:hover {
+    transform: translateX(5px);
+    box-shadow: 0 0 15px #ff4c4c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #ff4c4c;
+    opacity: 0.8;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fillSkill {
+    from { width: 0;}
+    to { width: var(--skill-width);}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>О нас</h1>
+</header>
+
+<div class="profile">
+    <!-- Левый блок: аватар и информация -->
+    <div class="profile-left">
+        <img src="avatar.jpg" alt="Аватар">
+        <h2>Расул Имангазиев</h2>
+        <p> Будущий - Web Developer | Front-end | Sofrware Developer</p>
+    </div>
+
+    <!-- Правый блок: навыки, социальные сети, проекты -->
+    <div class="profile-right">
+        <!-- Навыки -->
+        <div class="skills">
+            <div class="section-title">Навыки</div>
+            <div class="skill">
+                <div class="skill-name">
+                    <span>HTML/CSS</span>
+                    <span>1%</span>
+                </div>
+                <div class="skill-bar"><span style="--skill-width:1%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">
+                    <span>JavaScript</span>
+                    <span>0.1%</span>
+                </div>
+                <div class="skill-bar"><span style="--skill-width:0.1%"></span></div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">
+                    <span>C++</span>
+                    <span>0.01%</span>
+                </div>
+                <div class="skill-bar"><span style="--skill-width:0.01%"></span></div>
+            </div>
+        </div>
+
+        <!-- Социальные сети -->
+        <div class="socials">
+            <div class="section-title">Социальные сети:</div>
+            <a href="#" style="margin-left: 20px;">Instagram</a>
+            <a href="#">Telegram</a>
+            <a href="https://github.com/Rasul34345576">GitHub</a>
+        </div>
+
+        <!-- Проекты -->
+        <div class="projects">
+            <div class="section-title">Проекты</div>
+            <div class="project">
+                <h4>Личный сайт</h4>
+                <p>Могу сделать норм сайт.</p>
+            </div>
+            <div class="project">
+                <h4>Html, CSS, JavaScript</h4>
+                <p>Немного опыта есть.</p>
+            </div>
+            <div class="project">
+                <h4>C++</h4>
+                <p>Немного опыта есть.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2025 Расул Имангазиев.
+</footer>
+
+</body>
+</html>

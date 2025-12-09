@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Регистрация — Пример</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --accent: #0066ff;
+      --muted: #6b7280;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      margin: 0;
+      padding: 40px;
+      color: #111;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 32px;
+      align-items: center;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(20, 20, 50, 0.06);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    label {
+      font-size: 13px;
+      color: #111;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ef;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus {
+      box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.08);
+      border-color: var(--accent);
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 6px;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button.secondary {
+      background: #eef2ff;
+      color: var(--accent);
+      border: 1px solid rgba(0, 102, 255, 0.12);
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .small {
+      font-size: 13px;
+    }
+    .success {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #166534;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .error {
+      background: #fff3f2;
+      border: 1px solid #fecaca;
+      color: #7f1d1d;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .pw-toggle {
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--accent);
+      margin-left: 8px;
+    }
+    @media (max-width: 880px) {
+      .wrap {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Создайте аккаунт</h1>
+      <p class="lead">Быстрая и безопасная регистрация. Все поля обязательны, кроме телефона.</p>
+      <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f7">
+      
+      <form id="regForm" novalidate>
+        <div class="row">
+          <div>
+            <label for="firstName">Имя</label>
+            <input id="firstName" name="firstName" type="text" placeholder="Ваше имя" required>
+          </div>
+          <div>
+            <label for="lastName">Фамилия</label>
+            <input id="lastName" name="lastName" type="text" placeholder="Ваша фамилия" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="password">Пароль</label>
+            <div style="display:flex;align-items:center">
+              <input id="password" name="password" type="password" placeholder="Минимум 8 символов" minlength="8" required>
+              <span id="togglePw" class="pw-toggle">Показать</span>
+            </div>
+          </div>
+          <div>
+            <label for="confirm">Подтвердите пароль</label>
+            <input id="confirm" name="confirm" type="password" placeholder="Повторите пароль" minlength="8" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="phone">Телефон (опционально)</label>
+          <input id="phone" name="phone" type="tel" placeholder="+7 (777) 000-00-00">
+        </div>
+
+        <div>
+          <label for="role">Роль</label>
+          <select id="role" name="role" required>
+            <option value="">Выберите роль</option>
+            <option value="student">Студент</option>
+            <option value="teacher">Преподаватель</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+
+        <label style="display:flex;gap:8px;align-items:center">
+          <input id="agree" name="agree" type="checkbox" required>
+          <span class="small">
+            Я согласен(а) с 
+            <a href="#">условиями использования</a> и 
+            <a href="#">политикой конфиденциальности</a>.
+          </span>
+        </label>
+
+        <div class="actions">
+          <button type="submit">Зарегистрироваться</button>
+          <div class="muted" style="margin-left:auto">
+            Уже есть аккаунт? <a href="#">Войти</a>
+          </div>
+        </div>
+
+        <div id="message" style="margin-top:10px"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>Почему стоит зарегистрироваться</h3>
+      <ul>
+        <li>Персональные рекомендации</li>
+        <li>Доступ к закрытым разделам</li>
+        <li>Безопасность и восстановление аккаунта</li>
+      </ul>
+      <hr style="margin:14px 0;border:none;">
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('regForm');
+    const message = document.getElementById('message');
+    const toggle = document.getElementById('togglePw');
+    const password = document.getElementById('password');
+    const confirm = document.getElementById('confirm');
+    const fillDemo = document.getElementById('fillDemo');
+
+    toggle.addEventListener('click', () => {
+      const type = password.type === 'password' ? 'text' : 'password';
+      password.type = type;
+      confirm.type = type;
+      toggle.textContent = type === 'text' ? 'Скрыть' : 'Показать';
+    });
+
+
+    fillDemo.addEventListener('click', () => {
+      document.getElementById('firstName').value = 'Иван';
+      document.getElementById('lastName').value = 'Иванов';
+      document.getElementById('email').value = 'ivan@example.com';
+      password.value = 'Password123';
+      confirm.value = 'Password123';
+      document.getElementById('phone').value = '+7 (777) 123-45-67';
+      document.getElementById('role').value = 'student';
+      document.getElementById('agree').checked = true;
+    });
+
+    	form.addEventListener('submit', (e) => {
+      	e.preventDefault();
+     	 message.innerHTML = '';
+
+      	if (password.value !== confirm.value) {
+        	message.innerHTML = '<div class="error">Пароли не совпадают!</div>';
+        	return;
+      	}
+
+      	const data = {
+        	firstName: form.firstName.value,
+        	lastName: form.lastName.value,
+        	email: form.email.value,
+        	phone: form.phone.value,
+        	role: form.role.value
+      	};
+
+      	localStorage.setItem('registrationData', JSON.stringify(data));
+      	message.innerHTML = '<div class="success">Регистрация успешна!<br>Данные: <pre>' + JSON.stringify(data, null, 2) + '</pre></div>';
+     	 form.reset();
+    	});
+  	</script>
+</body>
+</html>

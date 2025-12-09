@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обезьяна — Ужастик</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #f0f0f0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(20,0,0,0.85);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      justify-content: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ff0000;
+    }
+
+    .banner {
+      width: 100%;
+      height: 320px;
+      position: relative;
+      background-image: url('banner2.jpg'); 
+      background-size: cover;
+      background-position: center;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(transparent, #000);
+    }
+
+    .info {
+      max-width: 1200px;
+      margin: -60px auto 40px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .title-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .poster {
+      width: 240px;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(255,0,0,0.6);
+    }
+
+    .movie-title {
+      font-size: 38px;
+      font-weight: 700;
+      color: #ff0000;
+    }
+
+    .rating {
+      margin-top: 10px;
+      font-size: 22px;
+      background: #ff0000;
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: black;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .details, .cast, .crew {
+      margin-top: 18px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ff0000;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 900px;
+      color: #f5f5f5;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border-radius: 16px;
+      margin-top: 20px;
+      border: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #111;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+      color: #ff5555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Фильм — Обезьяна</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="info">
+  <div class="title-block">
+    <img src="film.jpg" class="poster"> <!-- қорқынышты постер -->
+
+    <div>
+      <div class="movie-title">Обезьяна (2025)</div>
+      <div class="rating">7.8</div>
+
+      <div class="details">
+        🎬 Ужасы, комедия<br>
+        🌍 США • 1ч 38м<br>
+        📅 Премьера: 2025
+      </div>
+
+      <div class="cast">
+        <b>В главных ролях:</b><br>
+        Тео Джеймс, Татьяна Маслани, Кристиан Конвери, Колин О’Брайен, Адам Скотт
+      </div>
+
+      <div class="crew">
+        <b>Режиссёр:</b> Осгуд Перкинс<br>
+        <b>Продюсеры:</b> Дэйв Каплан, Джеймс Ван, Фред Бергер
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    «Обезьяна» — ужастик о странной обезьяне, которая появляется в небольшом городке.
+    Она пугает жителей и создаёт хаос, пока группа смелых подростков пытается раскрыть тайну.
+    Напряжение, страх и неожиданности ждут каждого!
+  </div>
+
+  <div class="section-title">Трейлер</div>
+  <iframe src="https://www.youtube.com/embed/example_trailer1" allowfullscreen></iframe>
+
+  <div class="section-title">Смотреть фильм</div>
+  <iframe src="https://www.youtube.com/embed/example_trailer2" allowfullscreen></iframe>
+</div>
+
+<footer>
+  Расул Имангазиев
+</footer>
+
+</body>
+</html>

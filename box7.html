@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Substance — Ужасы / Неон-триллер</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #050008;
+      color: #d9ffe9;
+      overflow-x: hidden;
+    }
+
+    /* НЕОНОВАЯ ЛИПКАЯ ТЕНЬ */
+    @keyframes liquidGlow {
+      0% { filter: drop-shadow(0 0 10px #ff00ff); }
+      50% { filter: drop-shadow(0 0 25px #00ffae); }
+      100% { filter: drop-shadow(0 0 10px #ff00ff); }
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 20px;
+      background: rgba(20, 0, 30, 0.75);
+      border-bottom: 1px solid #8000ff;
+      backdrop-filter: blur(6px);
+      animation: liquidGlow 4s infinite;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ff00ff;
+      text-shadow: 0 0 15px #ff00ff;
+    }
+
+    /* БАННЕР */
+    .banner {
+      width: 100%;
+      height: 420px;
+      background-image: url('banner6.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      animation: liquidGlow 5s infinite;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(transparent, #050008);
+    }
+
+    .info {
+      max-width: 1200px;
+      margin: -80px auto 40px;
+      padding: 20px;
+    }
+
+    .title-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .poster {
+      width: 250px;
+      border-radius: 12px;
+      animation: liquidGlow 4s infinite;
+    }
+
+    .movie-title {
+      font-size: 42px;
+      font-weight: 700;
+      color: #ff00ff;
+      text-shadow: 0 0 12px #ff00ff;
+      margin-top: 55px;
+    }
+
+    .rating {
+      margin-top: 10px;
+      background: #00ffa6;
+      color: #000;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 22px;
+      display: inline-block;
+      box-shadow: 0 0 20px #00ffa6;
+    }
+
+    .details, .cast, .crew {
+      margin-top: 18px;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .section-title {
+      margin-top: 45px;
+      font-size: 30px;
+      font-weight: 700;
+      color: #ff00ff;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e7d9ff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 0 25px #ff00ff;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      background: #12001a;
+      text-align: center;
+      font-size: 15px;
+      color: #ff9cff;
+      border-top: 1px solid #8000ff;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>THE SUBSTANCE — (2024)</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="info">
+
+  <div class="title-block">
+    <img src="film6.jpg" class="poster">
+
+    <div>
+      <div class="movie-title">The Substance (2024)</div>
+      <div class="rating">8.2</div>
+
+      <div class="details">
+        🧪 Ужасы, Триллер, Неон-биохоррор<br>
+        USA США • 2ч 21м<br>
+        📅 Премьера: 2024
+      </div>
+
+      <div class="cast">
+        <b>В главных ролях:</b><br>
+        Деми Мур — Элизабет<br>
+        Маргарет Куэлли — Сью<br>
+        Деннис Куэйд — Гаррет
+      </div>
+
+      <div class="crew">
+        <b>Режиссёр:</b> Коринн Фарма<br>
+        <b>Сценарий:</b> Коринн Фарма
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    «Субстанция» — неоновый биохоррор о женщине, решившей воспользоваться 
+    экспериментальной процедурой, создающей идеальную версию себя. 
+    Но “идеал” оказывается живым, опасным и стремится занять её место.  
+    Фильм наполнен телесным ужасом, кислотными цветами и атмосферой 
+    неизбежного распада личности.
+  </div>
+
+  <div class="section-title">Трейлер</div>
+  <iframe src="https://www.youtube.com/embed/Nqj3Hu7aGio" allowfullscreen></iframe>
+
+  <div class="section-title">Смотреть фильм</div>
+  <iframe src="https://www.youtube.com/embed/_3rro3agkqA" allowfullscreen></iframe>
+</div>
+
+<footer>
+  © Расул Имангазиев
+</footer>
+
+</body>
+</html>

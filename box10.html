@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Маска — Комедия</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff8e7;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 15px 20px;
+      background: #ffeb3b;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #00796b;
+      text-shadow: 1px 1px 2px #555;
+    }
+
+    .banner-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+    }
+
+    .banner-container .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('banner9.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.5);
+      z-index: 1;
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      top: 50px; /* сдвиг вниз */
+      flex-wrap: wrap;
+    }
+
+    .poster {
+      width: 240px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .poster:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-title {
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 6px #00796b;
+    }
+
+    .rating {
+      margin-top: 10px;
+      background: #00796b;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 22px;
+      display: inline-block;
+    }
+
+    .info {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .details, .cast, .crew {
+      margin-top: 18px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      font-size: 26px;
+      font-weight: 700;
+      color: #00796b;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 900px;
+      color: #333;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border-radius: 16px;
+      margin-top: 20px;
+      border: none;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #ffeb3b;
+      text-align: center;
+      font-size: 14px;
+      color: #00796b;
+    }
+
+    @media (max-width: 768px) {
+      .banner-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .poster {
+        width: 180px;
+      }
+
+      .movie-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Фильм — Маска</h1>
+</header>
+
+<div class="banner-container">
+  <div class="banner"></div>
+  <div class="banner-content">
+    <img src="film10.jpg" class="poster">
+    <div>
+      <div class="movie-title">Маска (1994)</div>
+      <div class="rating">7.0</div>
+    </div>
+  </div>
+</div>
+
+<div class="info">
+  <div class="details">
+    🎬 Комедия, фантастика<br>
+    🌍 США • 1ч 41м<br>
+    📅 Премьера: 1994
+  </div>
+
+  <div class="cast">
+    <b>В главных ролях:</b><br>
+    Джим Керри — Стэнли Ипкис<br>
+    Кэмерон Диас — Тина Карлайл<br>
+    Питер Ригерт — Дитц
+  </div>
+
+  <div class="crew">
+    <b>Режиссёр:</b> Чак Рассел<br>
+    <b>Продюсеры:</b> Джоэл Сильвер, Роберт Гринхут
+  </div>
+
+  <div class="description">
+    «Маска» — комедия о скромном банковском клерке Стэнли, который находит таинственную маску. 
+    Когда он надевает её, он превращается в невероятно харизматичного и забавного героя с 
+    суперспособностями. Полная приключений, юмора и безумных превращений история!
+  </div>
+
+  <div class="section-title">Трейлер</div>
+  <iframe src="https://www.youtube.com/embed/0C5mCqI5N6Y" allowfullscreen></iframe>
+
+  <div class="section-title">Смотреть фильм</div>
+  <iframe src="https://www.youtube.com/embed/mask_full_movie" allowfullscreen></iframe>
+</div>
+
+<footer>
+  Расул Имангазиев
+</footer>
+
+</body>
+</html>

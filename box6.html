@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чужой — Ужасы / Фантастика</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #000;
+      color: #d0ffd0;
+    }
+
+    header {
+      text-align: center;
+      padding: 15px 20px;
+      background: rgba(0, 20, 0, 0.85);
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #66ff66;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .banner {
+  width: 100%;
+  height: 320px;
+  background: url("banner5.jpg") no-repeat center center / cover;
+  position: relative;
+  display: block;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 10, 0, 0.35);
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(transparent, #000);
+}
+
+    .info {
+      max-width: 1200px;
+      margin: -60px auto 40px;
+      padding: 20px;
+    }
+
+    .title-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .poster {
+      width: 240px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    .movie-title {
+      font-size: 40px;
+      font-weight: 700;
+      color: #66ff66;
+      text-shadow: 0 0 10px #00ff00;
+      margin-top: 40px;
+    }
+
+    .rating {
+      margin-top: 10px;
+      background: #00ff00;
+      color: #000;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 22px;
+      display: inline-block;
+    }
+
+    .details, .cast, .crew {
+      margin-top: 18px;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #66ff66;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #e1ffe1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 0 25px rgba(0,255,0,0.4);
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #020802;
+      text-align: center;
+      font-size: 14px;
+      color: #66ff66;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Фильм — Чужой (Alien)</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="info">
+  <div class="title-block">
+    <img src="film5.jpg" class="poster">
+
+    <div>
+      <div class="movie-title">Чужой (1979)</div>
+      <div class="rating">8.5</div>
+
+      <div class="details">
+        👽 Фантастика, ужасы, триллер<br>
+        🌌 США, Великобритания • 1ч 57м<br>
+        📅 Премьера: 1979
+      </div>
+
+      <div class="cast">
+        <b>В главных ролях:</b><br>
+        Сигурни Уивер — Эллен Рипли<br>
+        Том Скерритт — Даллас<br>
+        Вероника Картрайт — Ламберт<br>
+        Йефет Котто — Паркер<br>
+        Джон Хёрт — Кейн<br>
+        Иэн Холм — Эш
+      </div>
+
+      <div class="crew">
+        <b>Режиссёр:</b> Ридли Скотт<br>
+        <b>Продюсеры:</b> Гордон Кэрролл, Дэвид Гилер, Уолтер Хилл
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    «Чужой» — культовый ужастик и научная фантастика о космическом корабле 
+    «Ностромо», который получает сигнал бедствия. Экипаж обнаруживает 
+    неизвестную форму жизни, которая вскоре превращается в самый 
+    смертельный кошмар. Фильм создаёт идеальный баланс ужаса, тишины, 
+    напряжения и клаустрофобии.
+  </div>
+
+  <div class="section-title">Трейлер</div>
+  <iframe src="https://www.youtube.com/embed/jQ5lPt9edzQ" allowfullscreen></iframe>
+
+  <div class="section-title">Смотреть фильм</div>
+  <iframe src="https://www.youtube.com/embed/9SMeOeFs5XQ" allowfullscreen></iframe>
+</div>
+
+<footer>
+  Расул Имангазиев
+</footer>
+
+</body>
+</html>

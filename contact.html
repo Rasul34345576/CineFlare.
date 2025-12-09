@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — Ваш Сайт Фильмов</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== ОБЩИЕ СТИЛИ ===== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #0b0b0b;
+    color: #f0f0f0;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #ff4444;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.banner{
+    margin-top: 100px;
+}
+
+/* ===== КОНТЕЙНЕР ===== */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ff4444;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+/* ===== ФОРМА ===== */
+form {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+}
+form label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #0b0b0b;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+form textarea {
+    resize: vertical;
+}
+form button {
+    display: inline-block;
+    padding: 14px 26px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* ===== КОНТАКТНАЯ ИНФОРМАЦИЯ ===== */
+.contact-info {
+    margin-top: 40px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,0,0,0.2);
+}
+.contact-info p {
+    margin: 8px 0;
+    font-size: 17px;
+}
+.contact-info a {
+    color: #ff4444;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: #111;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 50px;
+    color: #ff5555;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Контакты</h1>
+</header>
+
+<div class="banner"></div>
+
+<div class="container">
+    <div class="section-title">Связаться с нами</div>
+
+    <form action="#" method="POST">
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div class="contact-info">
+        <p>📞 Телефон: +7 776 001 66 66</p>
+        <p>📧 Email: <a href="raslimangaziev@gmail.com">raslimangaziev@gmail.com</a></p>
+        <p>🌍 Адрес: г. Алматы, Казахстан</p>
+        <p>⏰ Время работы: Пн-Пт 9:00 - 18:00</p>
+    </div>
+</div>
+
+<footer>
+    © 2025 Rasul Imangaziev
+</footer>
+
+</body>
+</html>
